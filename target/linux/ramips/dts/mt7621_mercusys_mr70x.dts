@@ -85,6 +85,7 @@
 
 				macaddr_factory_8: macaddr@8 {
 				reg = <0x8 0x6>;
+				};
 			};
 		};
 	};
