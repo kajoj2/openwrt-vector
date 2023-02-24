@@ -1481,6 +1481,20 @@ define Device/mediatek_mt7621-eval-board
 endef
 TARGET_DEVICES += mediatek_mt7621-eval-board
 
+define Device/mercusys_mr70x
+  $(Device/dsa-migration)
+  $(Device/tplink-safeloader)
+  KERNEL := $(KERNEL_DTB) | uImage lzma
+  IMAGE_SIZE := 15744k
+  DEVICE_VENDOR := Mercusys
+  DEVICE_MODEL := MR70X
+  DEVICE_ALT0_VENDOR := Mercusys
+  DEVICE_ALT0_MODEL := MR1800X
+  DEVICE_PACKAGES := kmod-mt7915-firmware
+LINK_BOARD_ID := MR70X
+endef
+TARGET_DEVICES += mercusys_mr70x
+
 define Device/MikroTik
   $(Device/dsa-migration)
   DEVICE_VENDOR := MikroTik
